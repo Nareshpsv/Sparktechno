@@ -2,194 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>landing-page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.<h1></h1>">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Live-Time</title>
+    <link rel="shortcut icon" href="./img/icons8-digital-clock-16.png" type="image/x-icon">
 </head>
-<body >
-
-    <section id="part1" >
-        <div>
-            <h1 style="text-decoration: none;">
-                Foodie 
-            </h1>
-            
-            <p>Order your favorite food from home.Say
-                goodbye to long waits and crowded restaurants, 
-                and hello to fast and
-                convenient ordering.</p>
-            <button >Order Now</button>
-        </div>
-    </section>
-
-    <!--            Section 2  how it works              -->
-    <section id="part2">
-
-        <h1 id="heading">How it Works</h1>
-
-        <div class="flex-1" >
-            <div class="step1 step">
-                <h3>
-                    Step 1
-                </h3>
-                <p>
-                    Browse the menu of our partnered restaurants.
-                </p>
-            </div>
-            <div class="step2 step">
-            <h3>
-                Step 2
-            </h3>
-            <p>
-                Select your items and place your order.
-            </p>
-            </div>
-            <div class="step3 step">
-                <h3>
-                    Step 3
-                </h3>
-                <p>
-                    Track your Order and receive it at your doorstep.
-                </p>
-            </div>
-        </div>
-
-    </section>
-
-    <!--            section 3  features of app              -->
-    <section id="part3">
-        <div>
-            <h1>Features of Our App</h1>
-        </div>
-        <div class="image-container">
-            <div class="img-card">
-                <div class="image-box">
-                <img src="./img/easy-ui-3410535_888.jpg" alt="">
-                </div>
-                    <h2>
-                        User-Friendly
-                    </h2>
-                
-            </div>
-            <div class="img-card"> 
-                <div class="image-box"> 
-                    <img src="./img/delivery-man-6982750_3333449.jpg" alt="">
-                </div>
-                    <h2>
-                        Fast Delivery
-                    </h2>
-                    
-                    
-                
-            </div>
-            <div class="img-card">
-            <div class="image-box">
-                <img src="./img/6169237_23715.jpg" alt="">
-            </div>
-            
-                <h2>
-                    On-the-Go Ordering
-                </h2>
-            
-            </div>
-            <div class="img-card">
-                <div class="image-box">
-                    <img src="./img/offers.jpg" alt="">
-                </div>
-                 <h2>
-                    Exclusive Deals
-                </h2>
-                 
-            </div>
-        </div>
-
-    </section>
-<div class="bg-img">
-
-    <!--         section-4    famous resturants                          -->
-    <section id="part4" >
-        <h1>
-            Restaurant Partners
-        </h1>
-        <div class="partners-box">
-            <div class="partners">
-                <h3>
-                    Hyderabad-town
-                </h3>
-                <p>
-                    Get authentic Hyderabad biriyani food delivered straight to
-                    your doorstep.
-                </p>
-
-            </div>
-            <div class="partners">
-                <h3>
-                    Simply South
-
-                </h3>
-                <p>
-                 The menu is an amalgamation of must-try preparations from five South Indian states
-                </p>
-
-            </div>
-            <div class="partners">
-                <h3>
-                    Rayalseema Ruchulu
-                </h3>
-                <p>
-                    This multi-outlet restaurant aims to showcase the very best of Telangana, Andhra and Rayalseema cuisine.
-                </p>
-            </div>
-            <div class="partners">
-                <h3>
-                    Shah Ghouse
-
-                </h3>
-                <p>
-                    Easily one of the top 10 biryanis in the city. The Double ka Meetha and Haleem at Shah Ghouse also come highly-recommended.
-                </p>
-            </div>
-
-
-        </div>
-    </section>
-    <!-- section-5    public talk    -->
-    <section id="part5">
-        <h1>
-            Hear what Our Happy Customers Have to Say!
-        </h1>
-        <p>
-            As a professional,this app has been a lifesaver.In this busy life it saves my time and food quality is consistently excellent.
-        ~virat</p>
-        <p>
-            I've tried many food delivery apps, but this one takes the cake.The discounts are amazing.      
-
-        ~mahesh</p>
-        <p>
-            It never disappoints, and the tracking feature keeps us excited until the doorbell rings.My family and I rely on this app for our weekend treat.
-        ~Ajay</p>
-
-    </section>
-    <!--                            footer              -->
-    <footer>
-        <button class="btn btn-danger">
-            <h1 style="text-decoration: none;">
-                Get Started Today
-            </h1>
-
-        </button>
-        <p>
-            Try our app today for a fast, easy, and convenient online food ordering experience. Get your favorite dishes delivered to your doorstep on time and in perfect condition.
-        </p>
-    </footer>
-</div>
-
-   
-
-
+<body>
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+    <div class="clock-box">
+        <h1 class="text" id="hrs">00</h1>
+        <h1 class="text" >:</h1>
+        <h1 class="text" id="mins">00</h1>
+        <h1 class="text">:</h1>
+        <h1 class="text" id="secs">00</h1>
+        <h1 id="am-pm">AM</h1>
+    </div>
     
+
+    <script>
+            function digitalTime(){
+
+                var time= new Date();
+
+                var hrs=time.getHours();
+                var mins=time.getMinutes();
+                var secs=time.getSeconds();
+                var am_pm= document.getElementById('am-pm');
+
+                // AM & PM  
+
+                if(hrs >=12){
+                    am_pm.innerHTML='PM';
+                }else{
+                    am_pm.innerHTML= 'AM';
+                }
+                // 12hrs
+
+                if(hrs>12){
+                    hrs=hrs-12;
+
+                }
+
+
+                document.getElementById('hrs').innerHTML=hrs;
+                document.getElementById('mins').innerHTML=mins;
+                document.getElementById('secs').innerHTML=secs;
+
+
+                }
+            setInterval(digitalTime ,10);
+
+
+    </script>
 </body>
 </html>
